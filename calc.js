@@ -33,6 +33,14 @@ let Calc = {
             result *= i
         }
         return result
+    },
+
+    square(inputValue){
+        return inputValue * inputValue
+    },
+
+    cube(inputValue) {
+        return inputValue * inputValue * inputValue
     }
 }
 

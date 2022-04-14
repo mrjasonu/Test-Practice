@@ -99,4 +99,44 @@ describe('Calc', () => {
             assert.equal(result, expectedOutput)
         })
     })
+
+    describe('.square', () => {
+        it('returns 4 when the number passed into it is 2', () => {
+            const inputValue = 2
+            const expectedOutput = 4
+
+            const result = Calc.square(inputValue)
+
+            assert.equal(result, expectedOutput)
+        })
+        
+        it('returns 64 when the number passed into it is 8', () => {
+            const inputValue = 8
+            const expectedOutput = 64
+
+            const result = Calc.square(inputValue)
+
+            assert.equal(result, expectedOutput)
+        }) 
+    })
+
+    describe('.cube', () => {
+        it('returns 8 when the value passed into it is 2', () => {
+            const inputValue = 2
+            const expectedOutput = 8
+
+            const result = Calc.cube(inputValue)
+
+            assert.equal(result, expectedOutput)
+        })
+
+        it('returns 1000 when the value passed into it is 10', () => {
+            const inputValue = 10
+            const expectedOutput = 1000
+
+            const result = Calc.cube(inputValue)
+
+            assert.equal(result, expectedOutput)
+        })
+    })
 })
