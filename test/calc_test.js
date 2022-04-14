@@ -70,4 +70,33 @@ describe('Calc', () => {
             assert.equal(result, expectedOutput)
         })
     })
+
+    describe('.factorial', () => {
+        it('returns 120 when the number passed into it is 5', () => {
+            const inputValue = 5
+            const expectedOutput = 120
+
+            const result = Calc.factorial(inputValue)
+
+            assert.equal(result, expectedOutput)
+        })
+
+        it('returns 6 when the number passed into it is 3', () => {
+            const inputValue = 3
+            const expectedOutput = 6
+
+            const result = Calc.factorial(inputValue)
+
+            assert.equal(result, expectedOutput)
+        })
+
+        it('returns 1 when the number passed into it is 0', () => {
+            const inputValue = 0
+            const expectedOutput = 1
+
+            const result = Calc.factorial(inputValue)
+
+            assert.equal(result, expectedOutput)
+        })
+    })
 })

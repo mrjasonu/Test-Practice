@@ -26,7 +26,14 @@ let Calc = {
         }
         return largest
     },
-    
+
+    factorial(inputValue) {
+        let result = 1
+        for (let i = inputValue; i > 1; i--) {
+            result *= i
+        }
+        return result
+    }
 }
 
 module.exports = Calc
