@@ -41,6 +41,19 @@ let Calc = {
 
     cube(inputValue) {
         return inputValue * inputValue * inputValue
+    },
+
+    average(inputList) {
+        if (inputList.length > 0) {
+            const average = this.listTotal(inputList) / inputList.length
+            return average
+        } else {
+            return 0
+        }
+    },
+
+    multiplication(inputA, inputB) {
+        return inputA * inputB
     }
 }
 

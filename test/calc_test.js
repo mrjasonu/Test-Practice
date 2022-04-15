@@ -1,6 +1,8 @@
 const assert = require('assert');
 const Calc = require('../calc')
 
+
+
 describe('Calc', () => {
     describe('.listTotal', () => {
         it('returns 5 when the list passed into it is [1 , 1, 3]', () => {
@@ -135,6 +137,57 @@ describe('Calc', () => {
             const expectedOutput = 1000
 
             const result = Calc.cube(inputValue)
+
+            assert.equal(result, expectedOutput)
+        })
+    })
+
+    describe('.average', () => {
+        it('returns 3 when the list passed into it is [2, 4]', () => {
+            const inputList = [2, 4]
+            const expectedOutput = 3
+
+            const result = Calc.average(inputList)
+
+            assert.equal(result, expectedOutput)
+        })
+
+        it('returns 1 when the list passed into it is [1, 1]', () => {
+            const inputList = [1, 1]
+            const expectedOutput = 1
+
+            const result = Calc.average(inputList)
+
+            assert.equal(result, expectedOutput)
+        })
+
+        it('returns 0 when the list passed into it contains 0 items', () => {
+            const inputList = []
+            const expectedOutput = 0
+
+            const result = Calc.average(inputList)
+
+            assert.equal(result, expectedOutput)
+        })
+    })
+
+    describe('.multiplication', () => {
+        it('returns 12 when the two arguments passed into it are 3 and 4', () => {
+            const inputA = 3
+            const inputB = 4
+            const expectedOutput = 12
+
+            const result = Calc.multiplication(3, 4)
+
+            assert.equal(result, expectedOutput)
+        })
+
+        it('returns 10 when the two values passed into it are 10 and 1', () => {
+            const inputA = 10
+            const inputB = 1
+            const expectedOutput = 10
+
+            const result = Calc.multiplication(10, 1)
 
             assert.equal(result, expectedOutput)
         })
