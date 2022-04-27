@@ -54,6 +54,14 @@ let Calc = {
 
     multiplication(inputA, inputB) {
         return inputA * inputB
+    },
+
+    modulus(inputA, inputB) {
+        if (inputA === 0 && inputB === 0) {
+            return 'Undefined'
+        } else {
+            return inputA % inputB
+        }
     }
 }
 

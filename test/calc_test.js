@@ -192,4 +192,36 @@ describe('Calc', () => {
             assert.equal(result, expectedOutput)
         })
     })
+
+    describe('.modulus', () => {
+        it('returns 0 when the inputs are 6 and 2 respectively', () => {
+            const inputA = 6
+            const inputB = 2
+            const expectedOutput = 0
+
+            const result = Calc.modulus(6, 2)
+
+            assert.equal(result, expectedOutput)
+        })
+
+        it('returns 1 when the two inputs are 4 and 3 respectively', () => {
+            const inputA = 4
+            const inputB = 3
+            const expectedOutput = 1
+
+            const result = Calc.modulus(4, 3)
+
+            assert.equal(result, expectedOutput)
+        })
+
+        it('returns undefined when the two inputs are 0 and 0', () => {
+            const inputA = 0
+            const inputB = 0
+            const expectedOutput = 'Undefined'
+
+            const result = Calc.modulus(0, 0)
+
+            assert.strictEqual(result, expectedOutput)
+        })
+    })
 })
