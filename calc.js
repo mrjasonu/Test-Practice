@@ -62,6 +62,18 @@ let Calc = {
         } else {
             return inputA % inputB
         }
+    },
+    
+    aPrimeNumber(inputA) {
+        if (inputA <= 1)
+            return false;
+
+        // Check from 2 to inputA-1
+        for (let i = 2; i < inputA; i++)
+            if (inputA % i == 0)
+                return false;
+    
+        return true;
     }
 }
 

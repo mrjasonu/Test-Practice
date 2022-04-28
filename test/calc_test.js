@@ -224,4 +224,42 @@ describe('Calc', () => {
             assert.strictEqual(result, expectedOutput)
         })
     })
+  
+    describe('.aPrimeNumber', () => {
+        it('returns true when the number passed into it is 5', () => {
+            const inputA = 5
+            const expectedOutput = true
+
+            const result = Calc.aPrimeNumber(inputA)
+
+            assert.strictEqual(result, expectedOutput)
+        })
+
+        it('returns true when the number passed into it is 8', () => {
+            const inputA = 8
+            const expectedOutput = false
+
+            const result = Calc.aPrimeNumber(inputA)
+
+            assert.strictEqual(result, expectedOutput)
+        })
+
+        it('returns false when the numbers passed into is is 1', () => {
+            const inputA = 1
+            const expectedOutput = false
+
+            const result = Calc.aPrimeNumber(inputA)
+
+            assert.strictEqual(result, expectedOutput)
+        })
+
+        it('returns false when the number passed into it is negative for example -5', () => {
+            const inputA = -5
+            const expectedOutput = false
+
+            const result = Calc.aPrimeNumber(inputA)
+
+            assert.strictEqual(result, expectedOutput)
+        })
+    })
 })
